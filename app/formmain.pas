@@ -778,7 +778,7 @@ type
     procedure DoFocusNextGroup(ANext: boolean);
     function GetFileOpenOptionsString(AFileCount: integer): string;
     function HandleRenameCheckAllowed(const AFileName: string): boolean;
-    procedure HandleTimerCommand(Ed: TATSynEdit; CmdCode: integer; CmdInvoke: TATCommandInvoke);
+    procedure HandleTimerCommand(Ed: TATSynEdit; ACommandCode: integer; ACommandInvoke: TATCommandInvoke);
     procedure InvalidateMouseoverDependantControls;
     function IsAnyFrameTextModified: boolean;
     function IsTooManyTabsOpened: boolean;
