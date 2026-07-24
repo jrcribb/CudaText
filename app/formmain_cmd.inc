@@ -101,6 +101,10 @@ begin
         CloseFormAutoCompletion;
 
         DoCloseAllTabs(false);
+        //why AClosePinned=False: we should respect pinned tabs as much as possible.
+        //using True will anyway show the confirmation on closing pinned tabs.
+        //if plugin needs to silently close _all_ tabs, it must loop over ed_handles()
+        //and for each ui-tab set PROP_TAB_PINNED (and PROP_MODIFIED) to False.
 
         Frame:= CurrentFrame;
         if Assigned(Frame) then
